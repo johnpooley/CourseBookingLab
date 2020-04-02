@@ -27,8 +27,8 @@ public class CustomerController {
     }
 
     @GetMapping(value= "/{name}")
-    public ResponseEntity<Optional<Customer>> getCustomer(@PathVariable Long id){
-        return new ResponseEntity(customerRepository.findCustomerByName("{name}"), HttpStatus.OK );
+    public ResponseEntity<Optional<Customer>> getCustomer(@PathVariable String name){
+        return new ResponseEntity(customerRepository.findCustomerByName(name), HttpStatus.OK );
     }
 
 
