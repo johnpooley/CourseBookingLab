@@ -26,7 +26,7 @@ class CourseBookingLabApplicationTests {
 	void contextLoads() {
 	}
 
-	
+
 	@Test
 		public void canFindCustomerByName(){
 		Customer customer = new Customer("John", "Glasgow", 21);
