@@ -19,4 +19,38 @@ public class Customer {
     private int age;
 
     public Customer(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
+
+
