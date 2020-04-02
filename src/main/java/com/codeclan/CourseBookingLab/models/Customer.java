@@ -11,12 +11,20 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(name = "name")
     private String name;
-    @Column
+
+    @Column(name = "town")
     private String town;
-    @Column
+
+    @Column(name = "age")
     private int age;
+
+    public Customer(String name, String town, int age) {
+        this.name = name;
+        this.town = town;
+        this.age = age;
+    }
 
     public Customer(){}
 
