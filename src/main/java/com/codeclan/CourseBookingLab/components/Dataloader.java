@@ -1,7 +1,9 @@
 package com.codeclan.CourseBookingLab.components;
 
+import com.codeclan.CourseBookingLab.models.Booking;
 import com.codeclan.CourseBookingLab.models.Course;
 import com.codeclan.CourseBookingLab.models.Customer;
+import com.codeclan.CourseBookingLab.repositories.BookingRepository;
 import com.codeclan.CourseBookingLab.repositories.CourseRepository;
 import com.codeclan.CourseBookingLab.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ public class Dataloader implements ApplicationRunner {
     @Autowired
     CourseRepository courseRepository;
 
+    @Autowired
+    BookingRepository bookingRepository;
+
     public Dataloader(){}
 
     public void run(ApplicationArguments args){
@@ -26,6 +31,9 @@ public class Dataloader implements ApplicationRunner {
 
         Customer customer2 = new Customer("jack","edinburgh",22);
         customerRepository.save(customer2);
+
+        Booking booking1 = new Booking("October", customer2);
+        bookingRepository.save(booking1);
 
         Course course = new Course("Digging", "Edinburgh", 7);
         courseRepository.save(course);
